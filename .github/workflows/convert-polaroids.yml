@@ -3,6 +3,8 @@ on:
   push:
     paths:
       - '.github/workflows/convert-polaroids.yml'
+      - 'images/**/*.heic'
+      - 'images/**/*.HEIC'
   workflow_dispatch:
 permissions:
   contents: write
