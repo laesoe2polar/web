@@ -27,7 +27,7 @@ nav{position:relative;z-index:15;max-width:1410px;margin:auto;padding:24px 34px;
 .polaroid:hover{transform:rotate(0) translateY(-6px);z-index:8}
 .photo{aspect-ratio:.95;position:relative;display:grid;place-items:center;overflow:hidden;background:linear-gradient(145deg,#94a7a1,#d8c3a2);filter:sepia(.17) saturate(.72)}
 .photo:before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 65% 22%,#f4e6b7dd 0 10%,transparent 11%),linear-gradient(150deg,transparent 48%,#647f7d 49% 61%,#9eaa91 62%);opacity:.7}
-.photo span{position:relative;z-index:1;font:20px/1.15 'Patrick Hand',cursive;text-align:center;background:#fff8e6b8;padding:7px}
+.photo>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block;z-index:1}.photo:has(>img):before{display:none}.photo span{position:relative;z-index:1;font:20px/1.15 'Patrick Hand',cursive;text-align:center;background:#fff8e6b8;padding:7px}
 .polaroid p{font:clamp(15px,1.6vw,21px)/1.1 'Patrick Hand',cursive;text-align:center;margin:9px 0 0;overflow-wrap:anywhere}
 .p1{left:9%;top:2%;--r:-8deg}.p2{left:1%;top:36%;--r:-12deg}.p3{left:14%;bottom:0;--r:7deg}.p4{right:8%;top:2%;--r:9deg}.p5{right:1%;top:37%;--r:-9deg}.p6{right:14%;bottom:0;--r:6deg}
 
@@ -50,17 +50,17 @@ dialog{max-width:420px;border:0;border-radius:12px;padding:32px;background:#fffa
 <div class="hero">
 
 <svg class="trail" viewBox="0 0 1200 750" preserveAspectRatio="none" aria-hidden="true"><path d="M68 134 C19 92 28 43 97 40 C191 31 208 120 333 96 C435 76 495 103 576 159 C674 218 800 158 850 110 C916 55 986 77 1072 111 C1172 147 1191 224 1162 309 C1139 387 1012 420 1005 500 C997 559 1135 592 1048 664 C960 735 875 694 787 718 C677 746 598 682 497 692 C380 706 335 656 252 674 C136 703 78 643 81 542 C85 461 184 431 182 370 C178 320 120 308 104 267"/></svg>
-<article class="polaroid p1"><div class="photo"><span>YOUR PHOTO</span></div><p>#ItsMe</p></article>
+<article class="polaroid p1"><div class="photo"><img src="images/itsme.jpg" alt="Sarah outdoors"></div><p>#ItsMe</p></article>
 <article class="polaroid p2"><div class="photo"><span>POLAR FRIEND<br>PHOTO</span></div><p>#PolarFriend</p></article>
 <article class="polaroid p3"><div class="photo"><span>HUSKY<br>PHOTO</span></div><p>#JustAddSledDogs</p></article>
 <article class="polaroid p4"><div class="photo"><span>ADVENTURE<br>PHOTO</span></div><p>#MakeFriendsWithWinter</p></article>
 <article class="polaroid p5"><div class="photo"><span>SNOW GEAR<br>PHOTO</span></div><p>#MushHappens</p></article>
-<article class="polaroid p6"><div class="photo"><span>ISLAND LIFE<br>PHOTO</span></div><p>#FromLaesoeToPolar</p></article>
+<article class="polaroid p6"><div class="photo"><img src="images/withlove.heic" alt="With love"></div><p>#FromLaesoeToPolar</p></article>
 <div class="video"><div class="hero-name"><strong>SARAH SMITH</strong><small>Polar 2027 · Candidate</small></div><div class="screen"><button class="play" id="play" aria-label="Application video coming soon">▶</button></div><div class="contest-tags"><span>#FjallravenPolar2027</span><span>#FromHeretoPolar2027</span></div></div>
 
 </div></section>
 <section class="about" id="about"><div class="about-wrap"><div class="about-polaroid">
-<div class="photo about-photo-real"><span class="photo-fallback">SARAH'S PHOTO</span><img src="images/about-sarah.jpg" alt="Sarah smiling outdoors in a floral sunhat and overalls" onload="this.parentElement.classList.add('loaded')" onerror="this.style.display='none'"></div>
+<div class="photo about-photo-real"><span class="photo-fallback">SARAH'S PHOTO</span><img src="images/AboutMe.HEIC" alt="Sarah smiling outdoors in a floral sunhat and overalls" onload="this.parentElement.classList.add('loaded')" onerror="this.style.display='none'"></div>
 <div class="photo-stamp"><img src="images/polar-candidate-stamp.svg" alt="Fjällräven Polar 2027 candidate stamp"></div>
 <div class="passport-stamp round usa-corner" style="--tilt:-11deg;--stamp:#985344"><span class="symbol">★</span><strong>USA</strong><small>Born &amp; bred</small></div>
 <div class="passport-stamp oval denmark-corner" style="--tilt:8deg;--stamp:#526d73"><span class="symbol">✳</span><strong>Denmark</strong><small>Since 2018</small></div>
