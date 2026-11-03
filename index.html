@@ -1,34 +1,63 @@
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport"
-        content="width=device-width, initial-scale=1">
-  <title>Læsø to Polar | Fjällräven Polar 2027</title>
-  <style>
-    body {
-      background: #f4efe4;
-      color: #263b38;
-      min-height: 100vh;
-      display: grid;
-      place-items: center;
-      margin: 0;
-      font-family: Georgia, serif;
-      text-align: center;
-    }
-    main { padding: 2rem; }
-    h1 { font-size: clamp(3rem, 9vw, 6rem); }
-    p { font-size: 1.25rem; }
-  </style>
-</head>
-<body>
-  <main>
-    <h1>Læsø to Polar</h1>
-    <p>One island. One big adventure.</p>
-    <p>Fjällräven Polar 2027</p>
-    <p>Mush happens. 🐾</p>
-    <p>Coming soon!</p>
-  </main>
-</body>
-</html>
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#e7dac3"><meta name="description" content="One island. One big adventure. Læsø to Polar — Fjällräven Polar 2027.">
+<title>Læsø to Polar | Fjällräven Polar 2027</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Patrick+Hand&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#342f29;--red:#995545;--paper:#e7dac3;--white:#fffaf0}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--paper);color:var(--ink);font-family:'DM Sans',sans-serif}a{color:inherit}a:focus-visible,button:focus-visible{outline:3px solid var(--red);outline-offset:4px}
+.map{position:relative;isolation:isolate;min-height:890px;overflow:hidden;background:radial-gradient(ellipse at 45% 30%,#f6f0e2 0,#e7dac3 60%,#c9b797 100%)}
+.map:before{content:"";pointer-events:none;position:absolute;inset:0;z-index:-1;opacity:.35;background:repeating-radial-gradient(ellipse at 45% 55%,transparent 0 44px,#a68f6c33 45px 46px,transparent 47px 83px)}
+.map:after{content:"";pointer-events:none;position:absolute;inset:0;z-index:10;opacity:.11;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 160 160' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
+nav{position:relative;z-index:15;max-width:1410px;margin:auto;padding:24px 34px;display:flex;justify-content:space-between;align-items:center;gap:18px}
+.brand{font:clamp(28px,4vw,49px)/1 'Patrick Hand',cursive;text-decoration:none;transform:rotate(-2deg);letter-spacing:.02em}
+.links{display:flex;gap:27px;align-items:center;font:24px 'Patrick Hand',cursive}.links a{text-decoration:none;border-bottom:2px solid transparent}.links a:hover{border-color:var(--red)}
+.stamp{border:2px solid #8b775d;border-radius:50%;padding:12px;transform:rotate(11deg);font-size:10px;letter-spacing:.13em;text-align:center;opacity:.65}
+.hero{height:750px;max-width:1450px;margin:0 auto;position:relative}
+.trail{width:100%;height:100%;position:absolute;inset:0;pointer-events:none;opacity:.65}.trail path{fill:none;stroke:#746448;stroke-width:2.8;stroke-dasharray:3 12;stroke-linecap:round}
+.video{position:absolute;left:26%;top:18%;width:48%;z-index:4;transform:rotate(-1.6deg)}
+.screen{aspect-ratio:1.45;position:relative;overflow:hidden;border:12px solid #fdf7eb;border-bottom-width:22px;box-shadow:0 15px 32px #372b2140;background:linear-gradient(150deg,#a3b1a6,#e6d6b8 55%,#778b88)}
+.screen:before,.screen:after{content:"";position:absolute;inset:0;clip-path:polygon(0 80%,20% 45%,29% 62%,45% 24%,57% 49%,71% 15%,86% 53%,100% 38%,100% 100%,0 100%);background:#6d8985aa}
+.screen:after{transform:translateY(17%);background:#536a69ad}
+.play{position:absolute;z-index:2;left:50%;top:50%;transform:translate(-50%,-50%);width:92px;height:92px;border:2px solid #fff9;border-radius:50%;background:#fff8eae8;cursor:pointer;font-size:40px;color:var(--ink);box-shadow:0 4px 20px #0002}.play:hover{background:#fff}
+.video-caption{text-align:center;font:clamp(16px,2.2vw,24px) 'Patrick Hand',cursive;margin-top:13px}
+.polaroid{position:absolute;z-index:5;width:clamp(125px,15%,205px);padding:9px 9px 13px;background:var(--white);box-shadow:0 10px 24px #3b2d2240;transform:rotate(var(--r));transition:transform .2s}
+.polaroid:hover{transform:rotate(0) translateY(-6px);z-index:8}
+.photo{aspect-ratio:.95;position:relative;display:grid;place-items:center;overflow:hidden;background:linear-gradient(145deg,#94a7a1,#d8c3a2);filter:sepia(.17) saturate(.72)}
+.photo:before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 65% 22%,#f4e6b7dd 0 10%,transparent 11%),linear-gradient(150deg,transparent 48%,#647f7d 49% 61%,#9eaa91 62%);opacity:.7}
+.photo span{position:relative;z-index:1;font:20px/1.15 'Patrick Hand',cursive;text-align:center;background:#fff8e6b8;padding:7px}
+.polaroid p{font:clamp(17px,2vw,24px)/1 'Patrick Hand',cursive;text-align:center;margin:9px 0 0}
+.p1{left:9%;top:2%;--r:-8deg}.p2{left:1%;top:36%;--r:-12deg}.p3{left:14%;bottom:0;--r:7deg}.p4{right:8%;top:2%;--r:9deg}.p5{right:1%;top:37%;--r:-9deg}.p6{right:14%;bottom:0;--r:6deg}
+.scribble{position:absolute;font:22px 'Patrick Hand',cursive;color:#9a5b45;z-index:6;bottom:12%;left:29%;transform:rotate(-8deg)}.scribble.right{left:auto;right:27%;transform:rotate(6deg)}
+.about{background:#f4eddf;padding:115px 25px 130px;scroll-margin-top:0}.about-wrap{max-width:1020px;margin:auto;display:grid;grid-template-columns:1fr 1.2fr;gap:70px;align-items:center}
+.about-polaroid{background:#fffaf0;box-shadow:0 13px 30px #30291e33;padding:15px 15px 58px;transform:rotate(-5deg)}.about-polaroid .photo{aspect-ratio:4/5}
+.eyebrow{text-transform:uppercase;letter-spacing:.19em;color:var(--red);font-size:12px;font-weight:700}h1{font:clamp(45px,6vw,79px)/1 'Patrick Hand',cursive;margin:12px 0 23px}.about p{line-height:1.75;font-size:17px}.hand{font:28px 'Patrick Hand',cursive;color:var(--red)}
+.email{display:inline-block;margin-top:16px;text-decoration:none;border-bottom:2px solid var(--red);padding-bottom:6px;font-weight:700}footer{text-align:center;padding:30px 12px;background:#dbcbb1;letter-spacing:.12em;font-size:12px;text-transform:uppercase}
+dialog{max-width:420px;border:0;border-radius:12px;padding:32px;background:#fffaf0;color:#342f29;box-shadow:0 20px 70px #0004}dialog::backdrop{background:#302e29aa}dialog button{background:var(--red);border:0;border-radius:30px;color:white;padding:10px 24px;cursor:pointer}
+@media(max-width:850px){.hero{height:820px}.video{left:14%;width:72%;top:29%}.polaroid{width:24%}.p1{left:4%;top:4%}.p4{right:4%;top:4%}.p2{left:2%;top:65%}.p5{right:2%;top:65%}.p3{left:29%;bottom:0}.p6{display:none}.scribble{display:none}.about-wrap{gap:40px}}
+@media(max-width:550px){.map{min-height:720px}nav{padding:17px}.stamp{display:none}.links{font-size:21px;gap:14px}.hero{height:650px}.video{left:5%;width:90%;top:32%}.screen{border-width:8px;border-bottom-width:15px}.play{width:70px;height:70px;font-size:30px}.polaroid{width:38%;max-width:150px}.p1{left:2%;top:4%}.p4{right:2%;top:6%}.p2{left:1%;top:73%}.p5{right:1%;top:73%}.p3{display:none}.polaroid p{font-size:16px}.photo span{font-size:15px}.about{padding:70px 24px}.about-wrap{grid-template-columns:1fr}.about-polaroid{max-width:260px;margin:auto}.about h1{font-size:59px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.polaroid{transition:none}}
+</style></head><body>
+<main><section class="map" id="top">
+<nav><a href="#top" class="brand">LÆSØ2POLAR</a><div class="links"><a href="#about">About Me ↓</a><a href="mailto:hello@laesoe2polar.com">Say hello ↗</a></div><span class="stamp">Island to<br>Arctic · 2027</span></nav>
+<div class="hero">
+<svg class="trail" viewBox="0 0 1200 750" preserveAspectRatio="none" aria-hidden="true"><path d="M185 122 C300 4 360 120 475 83 S650 12 760 132 S1050 84 1100 234 S960 359 1060 450 S850 570 740 655 S490 580 345 681 S70 560 155 440 S70 243 185 122"/></svg>
+<article class="polaroid p1"><div class="photo"><span>YOUR PHOTO<br>#ITS ME</span></div><p>Meet the explorer</p></article>
+<article class="polaroid p2"><div class="photo"><span>POLAR FRIEND<br>PHOTO</span></div><p>#PolarFriend</p></article>
+<article class="polaroid p3"><div class="photo"><span>HUSKY<br>PHOTO</span></div><p>Just add sled dogs!</p></article>
+<article class="polaroid p4"><div class="photo"><span>ADVENTURE<br>PHOTO</span></div><p>Wild at heart</p></article>
+<article class="polaroid p5"><div class="photo"><span>SNOW GEAR<br>PHOTO</span></div><p>Mush happens!</p></article>
+<article class="polaroid p6"><div class="photo"><span>ISLAND LIFE<br>PHOTO</span></div><p>From here to Polar</p></article>
+<div class="video"><div class="screen"><button class="play" id="play" aria-label="Application video coming soon">▶</button></div><div class="video-caption">THE ADVENTURE STARTS HERE · Application video coming soon</div></div>
+<span class="scribble">#FJALLRAVENPOLAR2027 ♡</span><span class="scribble right">#FROMHERE2POLAR2027</span>
+</div></section>
+<section class="about" id="about"><div class="about-wrap"><div class="about-polaroid"><div class="photo"><span>YOUR FAVORITE<br>PHOTO HERE</span></div></div><div><span class="eyebrow">The person behind the Polaroids</span><h1>Oh, hello there!</h1>
+<p>I'm applying for Fjällräven Polar 2027 from Læsø, a tiny Danish island full of wind, waves, wild weather, and everyday adventures.</p>
+<p>For me, the best stories begin with curiosity, a little courage, and absolutely no guarantee that everything will go according to plan.</p>
+<p class="hand">One island. One big adventure. ♡</p>
+<a class="email" href="mailto:hello@laesoe2polar.com">hello@laesoe2polar.com ↗</a></div></div></section></main>
+<footer>Læsø → Polar · Fjällräven Polar 2027 · Made with a little wind and a lot of heart</footer>
+<dialog id="coming"><p>The application video is coming soon! 🐾</p><form method="dialog"><button>Got it</button></form></dialog>
+<script>document.getElementById('play').addEventListener('click',()=>document.getElementById('coming').showModal())</script>
+</body></html>
