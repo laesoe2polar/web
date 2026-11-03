@@ -30,19 +30,32 @@ nav{position:relative;z-index:15;max-width:1410px;margin:auto;padding:24px 34px;
 .polaroid p{font:clamp(15px,1.6vw,21px)/1.1 'Patrick Hand',cursive;text-align:center;margin:9px 0 0;overflow-wrap:anywhere}
 .p1{left:9%;top:2%;--r:-8deg}.p2{left:1%;top:36%;--r:-12deg}.p3{left:14%;bottom:0;--r:7deg}.p4{right:8%;top:2%;--r:9deg}.p5{right:1%;top:37%;--r:-9deg}.p6{right:14%;bottom:0;--r:6deg}
 
+.expedition-patch{position:absolute;z-index:6;top:0;left:45%;width:118px;transform:rotate(9deg);filter:drop-shadow(2px 6px 4px #43311e55);pointer-events:none}.expedition-patch svg{display:block;width:100%;height:auto}
+.passport-stamps{display:flex;gap:13px;flex-wrap:wrap;margin:26px 0 12px;align-items:center}.passport-stamp{display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;width:126px;height:100px;border:3px double currentColor;border-radius:48%;padding:8px 6px;text-transform:uppercase;opacity:.8;transform:rotate(var(--tilt));color:#8c594c;font-family:'DM Sans',sans-serif}.passport-stamp strong{font-size:14px;letter-spacing:.13em}.passport-stamp span{font-size:10px;letter-spacing:.075em;line-height:1.35}.passport-stamp .star{font-size:16px;line-height:1.1}.passport-stamp:nth-child(2){color:#57716c}.passport-stamp:nth-child(3){color:#9b7150}
 .about{background:#f4eddf;padding:115px 25px 130px;scroll-margin-top:0}.about-wrap{max-width:1020px;margin:auto;display:grid;grid-template-columns:1fr 1.2fr;gap:70px;align-items:center}
 .about-polaroid{background:#fffaf0;box-shadow:0 13px 30px #30291e33;padding:15px 15px 58px;transform:rotate(-5deg)}.about-polaroid .photo{aspect-ratio:4/5}
 .eyebrow{text-transform:uppercase;letter-spacing:.19em;color:var(--red);font-size:12px;font-weight:700}h1{font:clamp(45px,6vw,79px)/1 'Patrick Hand',cursive;margin:12px 0 23px}.about p{line-height:1.75;font-size:17px}.hand{font:28px 'Patrick Hand',cursive;color:var(--red)}
 .email{display:inline-block;margin-top:16px;text-decoration:none;border-bottom:2px solid var(--red);padding-bottom:6px;font-weight:700}footer{text-align:center;padding:30px 12px;background:#dbcbb1;letter-spacing:.12em;font-size:12px;text-transform:uppercase}
 dialog{max-width:420px;border:0;border-radius:12px;padding:32px;background:#fffaf0;color:#342f29;box-shadow:0 20px 70px #0004}dialog::backdrop{background:#302e29aa}dialog button{background:var(--red);border:0;border-radius:30px;color:white;padding:10px 24px;cursor:pointer}
-@media(max-width:850px){.hero{height:820px}.video{left:14%;width:72%;top:29%}.polaroid{width:24%}.p1{left:4%;top:4%}.p4{right:4%;top:4%}.p2{left:2%;top:65%}.p5{right:2%;top:65%}.p3{left:29%;bottom:0}.p6{display:none}.contest-tags{flex-wrap:wrap;gap:5px 14px;white-space:normal;text-align:center;font-size:17px}.about-wrap{gap:40px}}
-@media(max-width:550px){.map{min-height:720px}nav{padding:17px}.stamp{display:none}.links{font-size:21px;gap:14px}.hero{height:650px}.video{left:5%;width:90%;top:32%}.screen{border-width:8px;border-bottom-width:15px}.play{width:70px;height:70px;font-size:30px}.polaroid{width:38%;max-width:150px}.p1{left:2%;top:4%}.p4{right:2%;top:6%}.p2{left:1%;top:73%}.p5{right:1%;top:73%}.p3{display:none}.polaroid p{font-size:16px}.photo span{font-size:15px}.about{padding:70px 24px}.about-wrap{grid-template-columns:1fr}.about-polaroid{max-width:260px;margin:auto}.about h1{font-size:59px}}
+@media(max-width:850px){.expedition-patch{left:44%;top:10%;width:100px}.hero{height:820px}.video{left:14%;width:72%;top:29%}.polaroid{width:24%}.p1{left:4%;top:4%}.p4{right:4%;top:4%}.p2{left:2%;top:65%}.p5{right:2%;top:65%}.p3{left:29%;bottom:0}.p6{display:none}.contest-tags{flex-wrap:wrap;gap:5px 14px;white-space:normal;text-align:center;font-size:17px}.about-wrap{gap:40px}}
+@media(max-width:550px){.expedition-patch{top:24%;left:41%;width:78px}.passport-stamps{justify-content:center;gap:8px}.passport-stamp{width:100px;height:84px}.passport-stamp strong{font-size:12px}.passport-stamp span{font-size:9px}.map{min-height:720px}nav{padding:17px}.stamp{display:none}.links{font-size:21px;gap:14px}.hero{height:650px}.video{left:5%;width:90%;top:32%}.screen{border-width:8px;border-bottom-width:15px}.play{width:70px;height:70px;font-size:30px}.polaroid{width:38%;max-width:150px}.p1{left:2%;top:4%}.p4{right:2%;top:6%}.p2{left:1%;top:73%}.p5{right:1%;top:73%}.p3{display:none}.polaroid p{font-size:16px}.photo span{font-size:15px}.about{padding:70px 24px}.about-wrap{grid-template-columns:1fr}.about-polaroid{max-width:260px;margin:auto}.about h1{font-size:59px}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.polaroid{transition:none}}
 </style></head><body>
 <main><section class="map" id="top">
 <nav><a href="#top" class="brand">LÆSØ2POLAR</a><div class="links"><a href="#about">About Me ↓</a><a href="mailto:hello@laesoe2polar.com">Say hello ↗</a></div><span class="stamp">Island to<br>Arctic · 2027</span></nav>
 <div class="hero">
-<svg class="trail" viewBox="0 0 1200 750" preserveAspectRatio="none" aria-hidden="true"><path d="M170 178 C205 110 265 73 365 91 S580 20 740 69 S1008 90 1055 184 C1115 270 1065 350 1044 427 S1114 566 1015 626 C928 679 841 642 731 654 S481 673 356 645 S111 690 113 554 C79 466 181 424 151 342 S122 245 170 178"/></svg>
+<div class="expedition-patch" role="img" aria-label="Læsø to Polar expedition patch with mountain motif">
+<svg viewBox="0 0 150 170" xmlns="http://www.w3.org/2000/svg">
+<path d="M75 5 L133 31 L140 108 L75 162 L10 108 L17 31 Z" fill="#b98754" stroke="#574633" stroke-width="5"/>
+<path d="M75 14 L124 37 L130 104 L75 148 L20 104 L26 37 Z" fill="#344c50" stroke="#ead1a1" stroke-width="3"/>
+<path d="M32 103 L62 61 L75 79 L93 49 L121 104 Z" fill="#a3b6b0" stroke="#f5e3c0" stroke-width="2"/>
+<path d="M51 77 L62 61 L70 72 M81 66 L93 49 L103 65" fill="none" stroke="#f7efdb" stroke-width="4"/>
+<path d="M32 110 Q75 119 119 110" fill="none" stroke="#d6b983" stroke-width="2"/>
+<text x="75" y="38" text-anchor="middle" fill="#f5e6c5" font-size="12" font-weight="bold" letter-spacing="1.4">LÆSØ</text>
+<text x="75" y="133" text-anchor="middle" fill="#f5e6c5" font-size="12" font-weight="bold" letter-spacing="1.1">POLAR · 27</text>
+<circle cx="75" cy="100" r="5" fill="#e8bf77"/>
+</svg></div>
+<svg class="trail" viewBox="0 0 1200 750" preserveAspectRatio="none" aria-hidden="true"><path d="M68 134 C19 92 28 43 97 40 C191 31 208 120 333 96 C435 76 495 103 576 159 C674 218 800 158 850 110 C916 55 986 77 1072 111 C1172 147 1191 224 1162 309 C1139 387 1012 420 1005 500 C997 559 1135 592 1048 664 C960 735 875 694 787 718 C677 746 598 682 497 692 C380 706 335 656 252 674 C136 703 78 643 81 542 C85 461 184 431 182 370 C178 320 120 308 104 267"/></svg>
 <article class="polaroid p1"><div class="photo"><span>YOUR PHOTO</span></div><p>#ItsMe</p></article>
 <article class="polaroid p2"><div class="photo"><span>POLAR FRIEND<br>PHOTO</span></div><p>#PolarFriend</p></article>
 <article class="polaroid p3"><div class="photo"><span>HUSKY<br>PHOTO</span></div><p>#JustAddSledDogs</p></article>
@@ -56,6 +69,11 @@ dialog{max-width:420px;border:0;border-radius:12px;padding:32px;background:#fffa
 <p>I'm applying for Fjällräven Polar 2027 from Læsø, a tiny Danish island full of wind, waves, wild weather, and everyday adventures.</p>
 <p>For me, the best stories begin with curiosity, a little courage, and absolutely no guarantee that everything will go according to plan.</p>
 <p class="hand">One island. One big adventure. ♡</p>
+<div class="passport-stamps" aria-label="A few stops along my journey">
+<div class="passport-stamp" style="--tilt:-10deg"><span class="star">★</span><strong>USA</strong><span>Born &amp; bred</span></div>
+<div class="passport-stamp" style="--tilt:7deg"><span class="star">✦</span><strong>Denmark</strong><span>Since 2018</span></div>
+<div class="passport-stamp" style="--tilt:-6deg"><span class="star">⌁</span><strong>Læsø</strong><span>Island home · 2025</span></div>
+</div>
 <a class="email" href="mailto:hello@laesoe2polar.com">hello@laesoe2polar.com ↗</a></div></div></section></main>
 <footer>Læsø → Polar · Fjällräven Polar 2027 · Made with a little wind and a lot of heart</footer>
 <dialog id="coming"><p>The application video is coming soon! 🐾</p><form method="dialog"><button>Got it</button></form></dialog>
