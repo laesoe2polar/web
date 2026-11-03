@@ -31,38 +31,22 @@ nav{position:relative;z-index:15;max-width:1410px;margin:auto;padding:24px 34px;
 .p1{left:9%;top:2%;--r:-8deg}.p2{left:1%;top:36%;--r:-12deg}.p3{left:14%;bottom:0;--r:7deg}.p4{right:8%;top:2%;--r:9deg}.p5{right:1%;top:37%;--r:-9deg}.p6{right:14%;bottom:0;--r:6deg}
 
 .expedition-patch{position:absolute;z-index:6;top:-8px;left:45%;width:130px;transform:rotate(9deg);filter:drop-shadow(2px 6px 4px #43311e55);pointer-events:none}.expedition-patch svg{display:block;width:100%;height:auto}
-.passport-stamps{display:flex;gap:13px;flex-wrap:wrap;margin:26px 0 12px;align-items:center}.passport-stamp{display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;width:126px;height:100px;border:3px double currentColor;border-radius:48%;padding:8px 6px;text-transform:uppercase;opacity:.8;transform:rotate(var(--tilt));color:#8c594c;font-family:'DM Sans',sans-serif}.passport-stamp strong{font-size:14px;letter-spacing:.13em}.passport-stamp span{font-size:10px;letter-spacing:.075em;line-height:1.35}.passport-stamp .star{font-size:16px;line-height:1.1}.passport-stamp:nth-child(2){color:#57716c}.passport-stamp:nth-child(3){color:#9b7150}
+.about-polaroid{position:relative;isolation:isolate;overflow:visible}.photo-stamp{position:absolute;top:-49px;left:-66px;width:60%;max-width:265px;z-index:8;opacity:.85;transform:rotate(-16deg);filter:drop-shadow(1px 2px 0 #f8f0e360);pointer-events:none}.photo-stamp img{display:block;width:100%;height:auto}
+.passport-stamps{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px 10px;margin:32px 0 18px;align-items:center}.passport-stamp{--stamp:#8c594c;--tilt:0deg;min-height:104px;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;position:relative;padding:10px 5px;color:var(--stamp);border:2px solid currentColor;transform:rotate(var(--tilt));opacity:.83;isolation:isolate;text-transform:uppercase;font-family:'DM Sans',sans-serif;text-shadow:.5px .5px 0 #f5ebdb;box-shadow:inset 0 0 0 3px #f4eddf,inset 0 0 0 4px currentColor;letter-spacing:.06em}.passport-stamp:after{content:"";position:absolute;inset:1px;opacity:.15;pointer-events:none;background:repeating-linear-gradient(17deg,transparent 0 4px,currentColor 5px 5.5px,transparent 6px 9px);mix-blend-mode:multiply;z-index:-1}.passport-stamp strong{font-size:clamp(11px,1.4vw,15px);line-height:1.1;letter-spacing:.1em}.passport-stamp small{font-size:9px;line-height:1.3;margin-top:5px;letter-spacing:.06em}.passport-stamp .symbol{font-size:21px;line-height:1.2;font-family:Georgia,serif}.passport-stamp.round{border-radius:50%;aspect-ratio:1;min-height:0}.passport-stamp.oval{border-radius:50%/35%}.passport-stamp.square{border-radius:8px}.passport-stamp.ticket{clip-path:polygon(0 0,100% 0,100% 40%,94% 50%,100% 60%,100% 100%,0 100%,0 60%,6% 50%,0 40%)}.passport-stamp.diamond{clip-path:polygon(50% 0,100% 50%,50% 100%,0 50%);padding:21px 6px;font-size:10px}.passport-stamp.diamond strong{font-size:12px}
+
 .about{background:#f4eddf;padding:115px 25px 130px;scroll-margin-top:0}.about-wrap{max-width:1020px;margin:auto;display:grid;grid-template-columns:1fr 1.2fr;gap:70px;align-items:center}
 .about-polaroid{background:#fffaf0;box-shadow:0 13px 30px #30291e33;padding:15px 15px 58px;transform:rotate(-5deg)}.about-polaroid .photo{aspect-ratio:4/5}
 .eyebrow{text-transform:uppercase;letter-spacing:.19em;color:var(--red);font-size:12px;font-weight:700}h1{font:clamp(45px,6vw,79px)/1 'Patrick Hand',cursive;margin:12px 0 23px}.about p{line-height:1.75;font-size:17px}.hand{font:28px 'Patrick Hand',cursive;color:var(--red)}
 .email{display:inline-block;margin-top:16px;text-decoration:none;border-bottom:2px solid var(--red);padding-bottom:6px;font-weight:700}footer{text-align:center;padding:30px 12px;background:#dbcbb1;letter-spacing:.12em;font-size:12px;text-transform:uppercase}
 dialog{max-width:420px;border:0;border-radius:12px;padding:32px;background:#fffaf0;color:#342f29;box-shadow:0 20px 70px #0004}dialog::backdrop{background:#302e29aa}dialog button{background:var(--red);border:0;border-radius:30px;color:white;padding:10px 24px;cursor:pointer}
-@media(max-width:850px){.expedition-patch{left:44%;top:10%;width:100px}.hero{height:820px}.video{left:14%;width:72%;top:29%}.polaroid{width:24%}.p1{left:4%;top:4%}.p4{right:4%;top:4%}.p2{left:2%;top:65%}.p5{right:2%;top:65%}.p3{left:29%;bottom:0}.p6{display:none}.contest-tags{flex-wrap:wrap;gap:5px 14px;white-space:normal;text-align:center;font-size:17px}.about-wrap{gap:40px}}
-@media(max-width:550px){.expedition-patch{top:24%;left:41%;width:78px}.passport-stamps{justify-content:center;gap:8px}.passport-stamp{width:100px;height:84px}.passport-stamp strong{font-size:12px}.passport-stamp span{font-size:9px}.map{min-height:720px}nav{padding:17px}.stamp{display:none}.links{font-size:21px;gap:14px}.hero{height:650px}.video{left:5%;width:90%;top:32%}.screen{border-width:8px;border-bottom-width:15px}.play{width:70px;height:70px;font-size:30px}.polaroid{width:38%;max-width:150px}.p1{left:2%;top:4%}.p4{right:2%;top:6%}.p2{left:1%;top:73%}.p5{right:1%;top:73%}.p3{display:none}.polaroid p{font-size:16px}.photo span{font-size:15px}.about{padding:70px 24px}.about-wrap{grid-template-columns:1fr}.about-polaroid{max-width:260px;margin:auto}.about h1{font-size:59px}}
+@media(max-width:1050px){.passport-stamps{grid-template-columns:repeat(3,minmax(0,1fr))}.photo-stamp{left:-40px;top:-42px}}@media(max-width:850px){.expedition-patch{left:44%;top:10%;width:100px}.hero{height:820px}.video{left:14%;width:72%;top:29%}.polaroid{width:24%}.p1{left:4%;top:4%}.p4{right:4%;top:4%}.p2{left:2%;top:65%}.p5{right:2%;top:65%}.p3{left:29%;bottom:0}.p6{display:none}.contest-tags{flex-wrap:wrap;gap:5px 14px;white-space:normal;text-align:center;font-size:17px}.about-wrap{gap:40px}}
+@media(max-width:550px){.passport-stamps{grid-template-columns:repeat(2,minmax(0,1fr));gap:13px}.passport-stamp{min-height:92px}.passport-stamp.round{min-height:0}.photo-stamp{width:58%;top:-36px;left:-27px}.expedition-patch{top:24%;left:41%;width:78px}.passport-stamps{justify-content:center;gap:8px}.passport-stamp{width:100px;height:84px}.passport-stamp strong{font-size:12px}.passport-stamp span{font-size:9px}.map{min-height:720px}nav{padding:17px}.stamp{display:none}.links{font-size:21px;gap:14px}.hero{height:650px}.video{left:5%;width:90%;top:32%}.screen{border-width:8px;border-bottom-width:15px}.play{width:70px;height:70px;font-size:30px}.polaroid{width:38%;max-width:150px}.p1{left:2%;top:4%}.p4{right:2%;top:6%}.p2{left:1%;top:73%}.p5{right:1%;top:73%}.p3{display:none}.polaroid p{font-size:16px}.photo span{font-size:15px}.about{padding:70px 24px}.about-wrap{grid-template-columns:1fr}.about-polaroid{max-width:260px;margin:auto}.about h1{font-size:59px}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.polaroid{transition:none}}
 </style></head><body>
 <main><section class="map" id="top">
 <nav><a href="#top" class="brand">LÆSØ2POLAR</a><div class="links"><a href="#about">About Me ↓</a><a href="mailto:hello@laesoe2polar.com">Say hello ↗</a></div><span class="stamp">Island to<br>Arctic · 2027</span></nav>
 <div class="hero">
-<div class="expedition-patch" role="img" aria-label="Vintage Læsø to Polar expedition emblem with a shield and hanging pennant">
-<svg viewBox="0 0 175 245" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-<!-- Inspired by the two-piece format of traditional expedition jacket patches, with original lettering and artwork. -->
-<path d="M42 18 L132 7 L162 76 L118 137 L17 110 L22 48 Z" fill="#a66e35" stroke="#77502c" stroke-width="5" stroke-linejoin="round"/>
-<path d="M44 27 L127 17 L151 75 L113 125 L29 102 L33 51 Z" fill="#263e43" stroke="#dfb878" stroke-width="2" stroke-linejoin="round"/>
-<path d="M38 94 L61 76 L72 82 L99 51 L127 82 L145 87 L115 113 Z" fill="#9ea9a0" opacity=".9"/>
-<path d="M60 78 L68 65 L77 79 L96 53 L106 68 L112 60 L125 78" fill="none" stroke="#f0e6d2" stroke-width="3" stroke-linecap="round"/>
-<path d="M39 101 L56 83 L67 97 L76 90 L90 108" fill="none" stroke="#526a67" stroke-width="7"/>
-<path d="M128 42 L132 50 M132 42 L128 50 M130 38 L130 54 M124 46 L136 46" stroke="#d9b67c" stroke-width="1.5"/>
-<text x="80" y="43" text-anchor="middle" fill="#f4e4c8" font-family="Georgia,serif" font-style="italic" font-weight="bold" font-size="19" transform="rotate(-8 80 43)">Læsø to</text>
-<text x="81" y="69" text-anchor="middle" fill="#f4e4c8" font-family="Georgia,serif" font-style="italic" font-weight="bold" font-size="24" transform="rotate(-8 81 69)">Polar</text>
-<!-- Separate narrow triangular pennant, as on the jacket reference -->
-<path d="M23 140 L111 156 L32 232 Z" fill="#a66e35" stroke="#77502c" stroke-width="5" stroke-linejoin="round"/>
-<path d="M31 148 L99 161 L38 219 Z" fill="#293f42" stroke="#e5bd7c" stroke-width="2"/>
-<path d="M36 159 L80 169 L42 205 Z" fill="#b7ad83" opacity=".8"/>
-<path d="M33 158 L44 160 L44 170 L54 172 L54 182 L65 184 L65 195 L46 214" fill="none" stroke="#8e493d" stroke-width="5"/>
-<path d="M39 154 L39 201 M49 160 L49 193 M59 163 L59 183" stroke="#f0d9a8" stroke-width="2" stroke-dasharray="2 3"/>
-<text x="51" y="180" text-anchor="middle" fill="#f9e8c9" font-family="Arial,sans-serif" font-size="8" font-weight="bold" transform="rotate(26 51 180)">2027</text>
-</svg></div>
+
 <svg class="trail" viewBox="0 0 1200 750" preserveAspectRatio="none" aria-hidden="true"><path d="M68 134 C19 92 28 43 97 40 C191 31 208 120 333 96 C435 76 495 103 576 159 C674 218 800 158 850 110 C916 55 986 77 1072 111 C1172 147 1191 224 1162 309 C1139 387 1012 420 1005 500 C997 559 1135 592 1048 664 C960 735 875 694 787 718 C677 746 598 682 497 692 C380 706 335 656 252 674 C136 703 78 643 81 542 C85 461 184 431 182 370 C178 320 120 308 104 267"/></svg>
 <article class="polaroid p1"><div class="photo"><span>YOUR PHOTO</span></div><p>#ItsMe</p></article>
 <article class="polaroid p2"><div class="photo"><span>POLAR FRIEND<br>PHOTO</span></div><p>#PolarFriend</p></article>
@@ -73,14 +57,19 @@ dialog{max-width:420px;border:0;border-radius:12px;padding:32px;background:#fffa
 <div class="video"><div class="screen"><button class="play" id="play" aria-label="Application video coming soon">▶</button></div><div class="contest-tags"><span>#FjallravenPolar2027</span><span>#FromHere2Polar2027</span></div></div>
 
 </div></section>
-<section class="about" id="about"><div class="about-wrap"><div class="about-polaroid"><div class="photo"><span>YOUR FAVORITE<br>PHOTO HERE</span></div></div><div><span class="eyebrow">The person behind the Polar-oids</span><h1>Oh, hello there!</h1>
+<section class="about" id="about"><div class="about-wrap"><div class="about-polaroid"><div class="photo"><span>YOUR FAVORITE<br>PHOTO HERE</span></div><div class="photo-stamp"><img src="images/polar-candidate-stamp.svg" alt="Fjällräven Polar 2027 candidate expedition stamp"></div></div><div><span class="eyebrow">The person behind the Polar-oids</span><h1>Oh, hello there!</h1>
 <p>I'm applying for Fjällräven Polar 2027 from Læsø, a tiny Danish island full of wind, waves, wild weather, and everyday adventures.</p>
 <p>For me, the best stories begin with curiosity, a little courage, and absolutely no guarantee that everything will go according to plan.</p>
 <p class="hand">One island. One big adventure. ♡</p>
-<div class="passport-stamps" aria-label="A few stops along my journey">
-<div class="passport-stamp" style="--tilt:-10deg"><span class="star">★</span><strong>USA</strong><span>Born &amp; bred</span></div>
-<div class="passport-stamp" style="--tilt:7deg"><span class="star">✦</span><strong>Denmark</strong><span>Since 2018</span></div>
-<div class="passport-stamp" style="--tilt:-6deg"><span class="star">⌁</span><strong>Læsø</strong><span>Island home · 2025</span></div>
+<div class="passport-stamps" aria-label="Places in my story">
+<div class="passport-stamp round" style="--tilt:-11deg;--stamp:#985344"><span class="symbol">★</span><strong>USA</strong><small>Born &amp; bred</small></div>
+<div class="passport-stamp ticket" style="--tilt:6deg;--stamp:#53706b"><span class="symbol">✺</span><strong>Australia</strong><small>Adventure log</small></div>
+<div class="passport-stamp square" style="--tilt:-5deg;--stamp:#8b6556"><span class="symbol">✿</span><strong>Japan</strong><small>旅 · Journey</small></div>
+<div class="passport-stamp oval" style="--tilt:9deg;--stamp:#6e7573"><span class="symbol">✦</span><strong>Korea</strong><small>Travel stamp</small></div>
+<div class="passport-stamp square" style="--tilt:7deg;--stamp:#a0784d"><span class="symbol">☼</span><strong>Argentina</strong><small>Southbound</small></div>
+<div class="passport-stamp round" style="--tilt:-8deg;--stamp:#70806a"><span class="symbol">☘</span><strong>Ireland</strong><small>On the map</small></div>
+<div class="passport-stamp oval" style="--tilt:6deg;--stamp:#526d73"><span class="symbol">✳</span><strong>Denmark</strong><small>Since 2018</small></div>
+<div class="passport-stamp ticket" style="--tilt:-9deg;--stamp:#95634d"><span class="symbol">⌁</span><strong>Læsø</strong><small>Island home · 2025</small></div>
 </div>
 <a class="email" href="mailto:hello@laesoe2polar.com">hello@laesoe2polar.com ↗</a></div></div></section></main>
 <footer>Læsø → Polar · Fjällräven Polar 2027 · Made with a little wind and a lot of heart</footer>
