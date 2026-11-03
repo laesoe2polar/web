@@ -21,7 +21,7 @@ nav{position:relative;z-index:15;max-width:1410px;margin:auto;padding:24px 34px;
 .screen:before,.screen:after{content:"";position:absolute;inset:0;clip-path:polygon(0 80%,20% 45%,29% 62%,45% 24%,57% 49%,71% 15%,86% 53%,100% 38%,100% 100%,0 100%);background:#6d8985aa}
 .screen:after{transform:translateY(17%);background:#536a69ad}
 .play{position:absolute;z-index:2;left:50%;top:50%;transform:translate(-50%,-50%);width:92px;height:92px;border:2px solid #fff9;border-radius:50%;background:#fff8eae8;cursor:pointer;font-size:40px;color:var(--ink);box-shadow:0 4px 20px #0002}.play:hover{background:#fff}
-.contest-tags{display:flex;justify-content:center;align-items:center;gap:clamp(12px,2vw,32px);margin-top:22px;transform:rotate(1.6deg);font:clamp(14px,1.65vw,21px)/1.3 'Patrick Hand',cursive;color:#9a5b45;white-space:nowrap}.contest-tags span{display:inline-block}
+.contest-tags{display:flex;justify-content:center;align-items:center;gap:clamp(12px,2vw,32px);margin-top:22px;transform:rotate(1.6deg);font:clamp(14px,1.65vw,21px)/1.3 'Patrick Hand',cursive;color:#9a5b45;white-space:nowrap}.contest-tags span{display:inline-block}.tag-trail{display:block;width:100%;height:35px;margin-top:7px;overflow:visible}.tag-trail path{fill:none;stroke:#746448;stroke-width:2.7;stroke-dasharray:3 12;stroke-linecap:round;opacity:.73}
 .polaroid{position:absolute;z-index:5;width:clamp(125px,15%,205px);padding:9px 9px 13px;background:var(--white);box-shadow:0 10px 24px #3b2d2240;transform:rotate(var(--r));transition:transform .2s}
 .polaroid:hover{transform:rotate(0) translateY(-6px);z-index:8}
 .photo{aspect-ratio:.95;position:relative;display:grid;place-items:center;overflow:hidden;background:linear-gradient(145deg,#94a7a1,#d8c3a2);filter:sepia(.17) saturate(.72)}
@@ -49,7 +49,7 @@ dialog{max-width:420px;border:0;border-radius:12px;padding:32px;background:#fffa
 <article class="polaroid p4"><div class="photo"><span>ADVENTURE<br>PHOTO</span></div><p>#MakeFriendsWithWinter</p></article>
 <article class="polaroid p5"><div class="photo"><span>SNOW GEAR<br>PHOTO</span></div><p>#MushHappens</p></article>
 <article class="polaroid p6"><div class="photo"><span>ISLAND LIFE<br>PHOTO</span></div><p>#FromLaesoeToPolar</p></article>
-<div class="video"><div class="screen"><button class="play" id="play" aria-label="Application video coming soon">▶</button></div><div class="contest-tags"><span>#FjallravenPolar2027</span><span>#FromHere2Polar2027</span></div></div>
+<div class="video"><div class="screen"><button class="play" id="play" aria-label="Application video coming soon">▶</button></div><div class="contest-tags"><span>#FjallravenPolar2027</span><span>#FromHere2Polar2027</span></div><svg class="tag-trail" viewBox="0 0 700 35" preserveAspectRatio="none" aria-hidden="true"><path d="M-25 4 Q165 34 350 23 T725 5"/></svg></div>
 
 </div></section>
 <section class="about" id="about"><div class="about-wrap"><div class="about-polaroid"><div class="photo"><span>YOUR FAVORITE<br>PHOTO HERE</span></div></div><div><span class="eyebrow">The person behind the Polar-oids</span><h1>Oh, hello there!</h1>
