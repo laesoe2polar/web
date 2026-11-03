@@ -1,0 +1,51 @@
+name: Convert Polar photos to JPG
+on:
+  push:
+    paths:
+      - '.github/workflows/convert-polaroids.yml'
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  convert:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install image converter
+        run: pip install pillow pillow-heif
+      - name: Convert photos and switch site references
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          from PIL import Image, ImageOps
+          from pillow_heif import register_heif_opener
+          register_heif_opener()
+          root=Path('images')
+          html=Path('index.html')
+          page=html.read_text()
+          for path in root.iterdir():
+              if path.suffix.lower() not in ('.heic', '.heif'):
+                  continue
+              out=path.with_suffix('.jpg')
+              with Image.open(path) as img:
+                  img=ImageOps.exif_transpose(img).convert('RGB')
+                  img.thumbnail((1600,1600))
+                  img.save(out, 'JPEG', quality=88, optimize=True)
+              page=page.replace('images/'+path.name, 'images/'+out.name)
+              print(f'Converted {path.name} to {out.name}')
+          html.write_text(page)
+          PY
+      - name: Commit converted photos and updated HTML
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add index.html images/*.jpg
+          if ! git diff --cached --quiet; then
+            git commit -m "Convert HEIC photos to browser-compatible JPG"
+            git push
+          fi
